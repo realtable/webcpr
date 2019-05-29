@@ -1,0 +1,38 @@
+{
+  "name": "webcpr",
+  "version": "0.0.1",
+  "description": "A library to ensure deprecated HTML elements will never fail to display",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "bundle": "webpack",
+    "minify": "cleancss -o dist/webcpr.min.css dist/webcpr.css",
+    "prepublish": "npm run bundle && npm run minify"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://realtable@github.com/realtable/webcpr.git"
+  },
+  "keywords": [
+    "html",
+    "web-components",
+    "polymer",
+    "lit-element"
+  ],
+  "author": "Josh Quail <josh@madbean.com> (https://github.com/realtable/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/realtable/webcpr/issues"
+  },
+  "homepage": "https://github.com/realtable/webcpr#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "clean-css-cli": "^4.3.0",
+    "clean-css-loader": "^2.0.0",
+    "css-loader": "^2.1.1",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.32.2",
+    "webpack-cli": "^3.3.2"
+  }
+}
