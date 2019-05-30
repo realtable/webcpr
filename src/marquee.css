@@ -49,34 +49,3 @@ marquee[direction="down"] * {
   0%   { transform: translate(0, 100%); }
   100% { transform: translate(0, -100%); }
 }
-/* mono.css - elements that use monospace */
-
-listing, plaintext, tt, xmp {
-  display: block;
-  font-family: monospace;
-  white-space: pre;
-  margin: 1em 0px;
-}
-/* simple.css - items that require <3 lines of CSS */
-
-acronym { } /* no styles */
-
-big {
-  font-size: larger;
-}
-
-center {
-  text-align: center;
-}
-
-hgroup {
-  display: block;
-}
-
-nobr {
-  white-space: nowrap;
-}
-
-strike {
-  text-decoration: line-through;
-}

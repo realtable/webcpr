@@ -5,7 +5,8 @@
 
 `webcpr` *(W.I.P.)* is a tool that lets you use deprecated elements in your HTML
 code, while not having to worry about browsers no longer supporting them. This
-works by replicating the CSS styles of each element and putting them into a style sheet
+works by replicating the inherited CSS styles of each element and putting them
+into a bundle.
 
 | home  | https://github.com/realtable/webcpr  |
 |:----- |:------------------------------------ |

@@ -1,4 +1,6 @@
-xmp, listing {
+/* mono.css - elements that use monospace */
+
+listing, plaintext, tt, xmp {
   display: block;
   font-family: monospace;
   white-space: pre;

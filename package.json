@@ -1,8 +1,8 @@
 {
   "name": "webcpr",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "A library to ensure deprecated HTML elements will never fail to display",
-  "main": "src/index.js",
+  "main": "dist/webcpr.min.css",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "bundle": "webpack",
@@ -14,10 +14,10 @@
     "url": "git+https://realtable@github.com/realtable/webcpr.git"
   },
   "keywords": [
-    "html",
-    "web-components",
-    "polymer",
-    "lit-element"
+    "css3",
+    "deprecated-html",
+    "minified-build",
+    "unpkg-link"
   ],
   "author": "Josh Quail <josh@madbean.com> (https://github.com/realtable/)",
   "license": "MIT",
