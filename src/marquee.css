@@ -1,16 +1,11 @@
 /* marquee.css - <marquee> */
 
-:root {
-  --marquee-h-speed: 22s;
-  --marquee-v-speed: 2s;
-}
-
 marquee {
   white-space: nowrap;
   overflow: hidden;
   box-sizing: border-box;
   white-space: nowrap;
-  width: -webkit-fill-available;
+  width: 100%;
   display: inline-block;
 }
 
@@ -20,23 +15,23 @@ marquee * { /* must contain element */
 
 marquee[direction="left"] * {
   padding-left: 100%;
-  animation: marquee-h --marquee-h-speed linear infinite;
+  animation: marquee-h 21.2s linear infinite;
   animation-direction: normal;
 }
 
 marquee[direction="right"] * {
   padding-left: 100%;
-  animation: marquee-h --marquee-h-speed linear infinite;
+  animation: marquee-h 21.2s linear infinite;
   animation-direction: reverse;
 }
 
 marquee[direction="up"] * {
-  animation: marquee-v --marquee-v-speed linear infinite;
+  animation: marquee-v 2s linear infinite;
   animation-direction: normal;
 }
 
 marquee[direction="down"] * {
-  animation: marquee-v --marquee-v-speed linear infinite;
+  animation: marquee-v 2s linear infinite;
   animation-direction: reverse;
 }
 

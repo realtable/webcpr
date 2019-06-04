@@ -1,16 +1,22 @@
-/* marquee.css - <marquee> */
+/* blink.css - <blink> */
 
-:root {
-  --marquee-h-speed: 22s;
-  --marquee-v-speed: 2s;
+blink {
+  animation: 2s linear infinite blink;
 }
+
+@keyframes blink {
+  0%   { visibility: hidden; }
+  50%  { visibility: hidden; }
+  100% { visibility: visible; }
+}
+/* marquee.css - <marquee> */
 
 marquee {
   white-space: nowrap;
   overflow: hidden;
   box-sizing: border-box;
   white-space: nowrap;
-  width: -webkit-fill-available;
+  width: 100%;
   display: inline-block;
 }
 
@@ -20,23 +26,23 @@ marquee * { /* must contain element */
 
 marquee[direction="left"] * {
   padding-left: 100%;
-  animation: marquee-h --marquee-h-speed linear infinite;
+  animation: marquee-h 21.2s linear infinite;
   animation-direction: normal;
 }
 
 marquee[direction="right"] * {
   padding-left: 100%;
-  animation: marquee-h --marquee-h-speed linear infinite;
+  animation: marquee-h 21.2s linear infinite;
   animation-direction: reverse;
 }
 
 marquee[direction="up"] * {
-  animation: marquee-v --marquee-v-speed linear infinite;
+  animation: marquee-v 2s linear infinite;
   animation-direction: normal;
 }
 
 marquee[direction="down"] * {
-  animation: marquee-v --marquee-v-speed linear infinite;
+  animation: marquee-v 2s linear infinite;
   animation-direction: reverse;
 }
 
@@ -49,7 +55,7 @@ marquee[direction="down"] * {
   0%   { transform: translate(0, 100%); }
   100% { transform: translate(0, -100%); }
 }
-/* mono.css - elements that use monospace */
+/* mono.css - monospaced elements */
 
 listing, plaintext, tt, xmp {
   display: block;
@@ -57,7 +63,7 @@ listing, plaintext, tt, xmp {
   white-space: pre;
   margin: 1em 0px;
 }
-/* simple.css - items that require <3 lines of CSS */
+/* simple.css - easy-to-code elements */
 
 acronym { } /* no styles */
 

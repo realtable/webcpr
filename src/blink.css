@@ -1,0 +1,11 @@
+/* blink.css - <blink> */
+
+blink {
+  animation: 2s linear infinite blink;
+}
+
+@keyframes blink {
+  0%   { visibility: hidden; }
+  50%  { visibility: hidden; }
+  100% { visibility: visible; }
+}

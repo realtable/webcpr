@@ -1,13 +1,13 @@
 {
   "name": "webcpr",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A library to ensure deprecated HTML elements will never fail to display",
   "main": "dist/webcpr.min.css",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "bundle": "webpack",
+    "bundle": "webpack --mode production",
     "minify": "cleancss -o dist/webcpr.min.css dist/webcpr.css",
-    "prepublish": "npm run bundle && npm run minify"
+    "prepare": "npm run bundle && npm run minify"
   },
   "repository": {
     "type": "git",
