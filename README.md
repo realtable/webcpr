@@ -14,5 +14,5 @@ browsers that no longer support them.
 | npm   | https://www.npmjs.com/package/webcpr |
 
 ```html
-<link rel="stylesheet" type="text/css" href="https://unpkg.com/webcpr/dist/webcpr.min.css">
+<script src="https://unpkg.com/webcpr/dist/webcpr.bundle.js"></script>
 ```

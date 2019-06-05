@@ -2,8 +2,26 @@ import $ from "jquery"
 
 export default function () {
   $(window).on('load', function () {
+    // special monoscape attributes
+    $('plaintext:first').text(document.documentElement.outerHTML.split('<plaintext>').pop())
+    $('listing').each(function() {
+      $(this).text($(this).html())
+    })
+    
+    // font control attributes
+    $('font').each(function () {
+      $(this).css('color', $(this).attr('color'))
+      $(this).css('font-size', $(this).attr('size'))
+      $(this).css('font-family', $(this).attr('face'))
+    })
+    $('basefont').each(function () {
+      $('body').css('color', $(this).attr('color'))
+      $('body').css('font-size', $(this).attr('size'))
+      $('body').css('font-family', $(this).attr('face'))
+    })
+    
     // <marquee> attributes
-    $('marqueex').each(function () {
+    $('marquee').each(function () {
       // embed span between marquee and content
       $(this).html(`<span class="webcpr-marquee">${$(this).html()}</span>`)
       
@@ -28,6 +46,11 @@ export default function () {
       } else if ($(this).attr('behavior') == 'slide') {
         $(this).find('.webcpr-marquee').css('animation-iteration-count', 1)
       }
+    })
+
+    // aliases
+    $('image').each(function () {
+      $(this).replaceWith('<img>' + $(this).html() +'</img>')
     })
   })
 }

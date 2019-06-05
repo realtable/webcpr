@@ -20,7 +20,7 @@ const style = {
     hgroup: {
       display: 'block'
     },
-    marqueex: {
+    marquee: {
       whiteSpace: 'nowrap',
       overflow: 'hidden',
       boxSizing: 'border-box',
