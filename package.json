@@ -1,6 +1,6 @@
 {
   "name": "webcpr",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "A library to ensure deprecated HTML elements will never fail to display",
   "main": "dist/webcpr.bundle.js",
   "scripts": {
@@ -26,6 +26,10 @@
   "homepage": "https://github.com/realtable/webcpr#readme",
   "dependencies": {},
   "devDependencies": {
+    "@babel/cli": "^7.4.4",
+    "@babel/core": "^7.4.5",
+    "@babel/preset-env": "^7.4.5",
+    "babel-loader": "^8.0.6",
     "jquery": "^3.4.1",
     "jss": "^9.8.7",
     "jss-preset-default": "^4.5.0",

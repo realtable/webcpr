@@ -50,7 +50,14 @@ export default function () {
 
     // aliases
     $('image').each(function () {
-      $(this).replaceWith('<img>' + $(this).html() +'</img>')
+      var n = $('<img>', { html: $(this).html() })
+  		$.each(this.attributes, function () {
+  			n.attr(this.name, this.value)
+  		})
+  		$(this).replaceWith(n)
+    })
+    $('bgsound').each(function () {
+      $(this).replaceWith(`<audio volume="${(Number($(this).attr('volume'))+10000)/10000}" autoplay ${$(this).attr('loop') == 'infinite' ? 'loop' : ''} hidden><source src=${$(this).attr('src')}></audio>`)
     })
   })
 }
