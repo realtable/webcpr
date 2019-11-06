@@ -14,5 +14,5 @@ new browsers.
 | npm   | https://www.npmjs.com/package/webcpr |
 
 ```html
-<script src="https://unpkg.com/webcpr"></script>
+<script src="https://cdn.jsdelivr.net/npm/webcpr"></script>
 ```
