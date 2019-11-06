@@ -1,14 +1,14 @@
 ### List of supported HTML elements
 
-Below is a list of all deprecated/obsolete HTMl elements (according to Mozilla)
-and whether they are supported by `webcpr`.
+Below is a list of all deprecated/obsolete HTMl elements and whether or not they
+are supported by `webcpr`.
 
 **\*** : No CSS or JS code needed to support element, i.e. the element has no
-style or functionality, and is just used to indicate.
+style or functionality, and is just used as an indicator.
 
 | Element       | Supported? |
 | ------------- | ---------- |
-| `<acronym>`   | yes*       |
+| `<acronym>`   | yes**\***  |
 | `<applet>`    | no         |
 | `<basefont>`  | yes        |
 | `<bgsound>`   | partial    |
@@ -20,8 +20,8 @@ style or functionality, and is just used to indicate.
 | `<dir>`       | no         |
 | `<element>`   | no         |
 | `<font>`      | yes        |
-| `<frame>`     | no         |
-| `<frameset>`  | no         |
+| `<frame>`     | partial    |
+| `<frameset>`  | partial    |
 | `<image>`     | yes        |
 | `<isindex>`   | no         |
 | `<keygen>`    | no         |
@@ -29,13 +29,13 @@ style or functionality, and is just used to indicate.
 | `<marquee>`   | partial    |
 | `<menuitem>`  | no         |
 | `<multicol>`  | no         |
-| `<nextid>`    | no         |
+| `<nextid>`    | yes**\***  |
 | `<nobr>`      | yes        |
 | `<noembed>`   | partial    |
 | `<noframes>`  | yes        |
 | `<plaintext>` | yes        |
 | `<shadow>`    | no         |
-| `<spacer>`    | no         |
+| `<spacer>`    | yes        |
 | `<strike>`    | yes        |
 | `<tt>`        | yes        |
 | `<xmp>`       | yes        |

@@ -15,5 +15,5 @@ functionality work, as these could be deprecated at any time.
 | npm   | https://www.npmjs.com/package/webcpr |
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/webcpr"></script>
+<script src="https://cdn.jsdelivr.net/npm/webcpr@0.1.5"></script>
 ```

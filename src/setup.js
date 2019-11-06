@@ -59,6 +59,9 @@ export default function () {
     $('bgsound').each(function () {
       $(this).replaceWith(`<audio volume="${(Number($(this).attr('volume'))+10000)/10000}" autoplay ${$(this).attr('loop') == 'infinite' ? 'loop' : ''} hidden><source src=${$(this).attr('src')}></audio>`)
     })
+    $('frame').each(function () {
+      $(this).replaceWith(`<iframe src="${$(this).attr('src')}" id="${$(this).attr('name')}" style="margin: ${$(this).attr('marginheight')} ${$(this).attr('marginwidth')};"></iframe>`)
+    })
     
     // <noembed> and <noframes>
     $('noembed').each(function () {
@@ -70,6 +73,34 @@ export default function () {
       let testFrame = document.createElement('frame')
       let check = Object.prototype.toString.call(testFrame) !== '[object HTMLUnknownElement]'
       if (check) $(this).hide()
+    })
+    
+    // <frameset> things
+    $('frameset').each(function () {
+      let widths = $(this).attr('cols').split(',')
+      let heights = $(this).attr('rows').split(',')
+      let wpos = 0
+      let hpos = 0
+      $(this).children('frame').each(function () {
+        $(this).css('width', widths[pos])
+        $(this).css('height', heights[pos])
+        wpos++
+        if (wpos == widths.length) {
+          wpos = 0
+          hpos++
+        }
+      })
+    })
+    
+    // <spacer> things
+    $('spacer').each(function () {
+      if ($(this).attr('type') == 'horizontal') $(this).css('width', $(this).attr('size'))
+      else if ($(this).attr('type') == 'vertical') $(this).css('height', $(this).attr('size'))
+      else if ($(this).attr('type') == 'block') {
+        $(this).css('width', $(this).attr('width'))
+        $(this).css('height', $(this).attr('height'))
+      }
+      $(this).css('text-align', $(this).attr('align'))
     })
   })
 }
