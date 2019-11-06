@@ -7,7 +7,8 @@
 code, while not having to worry about browsers no longer supporting them. This
 works sort of like an anti-polyfill: instead of making the functionality of new
 browsers work in older browsers, it makes *deprecated* functionality work in
-new browsers.
+new browsers. To be prepared for the future, this package also makes obsolete
+functionality work, as these could be deprecated at any time.
 
 | home  | https://github.com/realtable/webcpr  |
 |:----- |:------------------------------------ |

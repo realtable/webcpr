@@ -1,6 +1,6 @@
 {
   "name": "webcpr",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "A library to ensure deprecated HTML elements will never fail to display",
   "main": "dist/webcpr.bundle.js",
   "scripts": {
@@ -16,7 +16,7 @@
     "html5",
     "polyfill",
     "webpack",
-    "unpkg"
+    "jsdelivr"
   ],
   "author": "Josh Quail <josh@madbean.com> (https://github.com/realtable/)",
   "license": "MIT",

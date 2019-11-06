@@ -4,7 +4,7 @@ export default function () {
   $(window).on('load', function () {
     // special monoscape attributes
     $('plaintext:first').text(document.documentElement.outerHTML.split('<plaintext>').pop())
-    $('listing').each(function() {
+    $('listing').each(function () {
       $(this).text($(this).html())
     })
     
@@ -41,7 +41,7 @@ export default function () {
       
       // edit animation behavior
       if ($(this).attr('behavior') == 'alternate') {
-        var altType = $(this).css('animation-direction') == 'reverse' ? 'alternate-reverse' : 'alternate'
+        let altType = $(this).css('animation-direction') == 'reverse' ? 'alternate-reverse' : 'alternate'
         $(this).find('.webcpr-marquee').css('animation-direction', altType)
       } else if ($(this).attr('behavior') == 'slide') {
         $(this).find('.webcpr-marquee').css('animation-iteration-count', 1)
@@ -50,7 +50,7 @@ export default function () {
 
     // aliases
     $('image').each(function () {
-      var n = $('<img>', { html: $(this).html() })
+      let n = $('<img>', { html: $(this).html() })
   		$.each(this.attributes, function () {
   			n.attr(this.name, this.value)
   		})
@@ -58,6 +58,18 @@ export default function () {
     })
     $('bgsound').each(function () {
       $(this).replaceWith(`<audio volume="${(Number($(this).attr('volume'))+10000)/10000}" autoplay ${$(this).attr('loop') == 'infinite' ? 'loop' : ''} hidden><source src=${$(this).attr('src')}></audio>`)
+    })
+    
+    // <noembed> and <noframes>
+    $('noembed').each(function () {
+      let testEmbed = document.createElement('embed')
+      let check = Object.prototype.toString.call(testEmbed) !== '[object HTMLUnknownElement]'
+      if (check) $(this).hide()
+    })
+    $('noframes').each(function () {
+      let testFrame = document.createElement('frame')
+      let check = Object.prototype.toString.call(testFrame) !== '[object HTMLUnknownElement]'
+      if (check) $(this).hide()
     })
   })
 }
