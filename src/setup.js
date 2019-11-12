@@ -1,3 +1,4 @@
+// TODO do shadow dom elements
 import $ from "jquery"
 
 export default function () {
@@ -62,6 +63,13 @@ export default function () {
     $('frame').each(function () {
       $(this).replaceWith(`<iframe src="${$(this).attr('src')}" id="${$(this).attr('name')}" style="margin: ${$(this).attr('marginheight')} ${$(this).attr('marginwidth')};"></iframe>`)
     })
+    $('multicol').each(function () {
+      let n = $('<div>', { html: $(this).html() })
+  		$.each(this.attributes, function () {
+  			n.attr(this.name, this.value)
+  		})
+  		$(this).replaceWith(n)
+    })
     
     // <noembed> and <noframes>
     $('noembed').each(function () {
@@ -101,6 +109,17 @@ export default function () {
         $(this).css('height', $(this).attr('height'))
       }
       $(this).css('text-align', $(this).attr('align'))
+    })
+    
+    // shadow dom elements
+    $('content, shadow').each(function () {
+      let curr = ''
+      for (let i of $(this).attr('select').split(',')) {
+        $(i).each(function () {
+          curr = $(this).html()
+        })
+        $(this).html($(this).html() + curr)
+      }
     })
   })
 }
