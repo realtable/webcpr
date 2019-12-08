@@ -1,6 +1,6 @@
 {
   "name": "webcpr",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "A library to ensure deprecated HTML elements will never fail to display",
   "main": "dist/webcpr.bundle.js",
   "scripts": {
@@ -33,7 +33,7 @@
     "jquery": "^3.4.1",
     "jss": "^9.8.7",
     "jss-preset-default": "^4.5.0",
-    "webpack": "^4.32.2",
+    "webpack": "^4.41.2",
     "webpack-cli": "^3.3.2"
   }
 }
