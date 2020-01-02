@@ -1,8 +1,8 @@
 {
   "name": "webcpr",
-  "version": "0.1.7",
+  "version": "0.2.0",
   "description": "A library to ensure deprecated HTML elements will never fail to display",
-  "main": "dist/webcpr.bundle.js",
+  "main": "dist/webcpr.min.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "prepare": "webpack -p"
@@ -33,6 +33,7 @@
     "jquery": "^3.4.1",
     "jss": "^9.8.7",
     "jss-preset-default": "^4.5.0",
+    "terser-webpack-plugin": "^2.3.1",
     "webpack": "^4.41.2",
     "webpack-cli": "^3.3.2"
   }

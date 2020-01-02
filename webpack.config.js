@@ -1,12 +1,14 @@
 const path = require('path');
+const TerserPlugin = require('terser-webpack-plugin');
 
 module.exports = {
   entry: {
-    app: './src/index.js'
+    'webcpr': './src/index.js',
+    'webcpr.min': './src/index.js'
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'webcpr.bundle.js'
+    filename: '[name].js'
   },
   module: {
     rules: [
@@ -17,4 +19,10 @@ module.exports = {
       },
     ],
   },
+  optimization: {
+    minimize: true,
+    minimizer: [new TerserPlugin({
+      include: /\.min\.js$/
+    })]
+  }
 };
